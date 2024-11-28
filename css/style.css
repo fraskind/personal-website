@@ -1,0 +1,346 @@
+
+/* Basic Reset */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "adobe-garamond-pro", serif;
+    box-sizing: border-box;
+}
+
+/* NAVIGATION LINK STYLING */
+/* Styling size of external link icon */
+.external-link-icon {
+    width: 16px;
+    /* Adjust the width as needed */
+    height: 16px;
+    /* Adjust the height as needed */
+    vertical-align: middle;
+    /* Aligns the icon with the text */
+}
+
+/* Style active link with underline */
+.nav-link.active {
+    text-decoration: underline;
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    /* Dark background */
+    color: rgb(0, 0, 0);
+    z-index: 1000;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    /* Right-align links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    /* Space between links */
+}
+
+.nav-link {
+    text-decoration: none;
+    /* Remove default underline */
+    color: rgb(0, 0, 0);
+    /* Match header text color */
+    font-size: 18px;
+    /* Bigger font size */
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.nav-link:hover {
+    color: #ca6935;
+    /* Highlight color on hover */
+    text-decoration: none;
+}
+
+/* Current Link Underlined */
+.nav-link.active {
+    text-decoration: underline;
+    /* Underline current page link */
+}
+
+/* Example for Current Page Link */
+body.cs-work .nav-link[href="cs-work.html"],
+body.ux-work .nav-link[href="ux-work.html"] {
+    text-decoration: underline;
+}
+
+/* Header Icons */
+.header-icons {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    /* Position in the top left corner */
+    top: 10px;
+    left: 20px;
+    gap: 15px;
+    /* Space between icons */
+    z-index: 1001;
+    /* Ensure it stays above other elements */
+}
+
+.icon-link {
+    color: #333;
+    /* Icon color */
+    font-size: 20px;
+    /* Icon size */
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #ca6935;
+    /* Hover color */
+    text-decoration: none;
+    /* Remove any underline effect */
+}
+
+/* INTRODUCTION STYLING */
+
+/* NAME PRONUNCIATION */
+/* Tooltip Container */
+.tooltip {
+    position: relative;
+    /* Establish a context for the tooltip */
+    cursor: help;
+    /* Indicate more information is available */
+}
+
+/* Tooltip Text */
+.tooltip::after {
+    content: attr(data-tooltip);
+    /* Get text from the data-tooltip attribute */
+    position: absolute;
+    left: 50%;
+    bottom: 120%;
+    /* Position above the name */
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Dark background for contrast */
+    color: #fff;
+    /* White text for readability */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 1.2;
+    white-space: nowrap;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    /* Initially hidden */
+    visibility: hidden;
+    pointer-events: none;
+    /* Prevent interaction with tooltip */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Tooltip Hover Effect */
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.intro-logo {
+    max-width: 100px;
+    /* Adjust the size as needed */
+    margin-bottom: 10px;
+    /* Space between the logo and the heading */
+}
+
+/* Keyframes for fade-in from the right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply the animation to elements with the fade-in-right class */
+.fade-in-right {
+    animation: fadeInRight 1s ease-out forwards;
+}
+
+/* Add padding to the left */
+.padded-left {
+    padding-left: 55px;
+}
+
+#intro-heading {
+    font-size: 50px;
+    font-family: "adobe-garamond-pro", bold;
+}
+
+.intro {
+    padding-top: 50px; /* Add padding between header and intro */
+    position: relative;
+    overflow: hidden;
+}
+/* Aligning intro content */
+.intro-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 200px; /* Add padding left and right */
+}
+
+.intro-text {
+    flex: 1;
+    /* Takes up remaining space */
+    z-index: 2;
+}
+
+.intro-image {
+    text-align: right;
+    overflow: hidden; /* Ensures the image is cropped */
+    height: 550px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* position: absolute; */
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* clip-path: inset(0 15% 0 0); */
+    mask-image: linear-gradient(to right, transparent, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 40%);
+}
+
+/* FEATURED WORK */
+.featured-work {
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 50px 200px; /* Add padding */
+}
+
+#work-heading {
+    font-size: 36px;
+    font-family: "adobe-garamond-pro", bold;
+    margin-bottom: 65px;
+}
+
+#project-type-heading {
+    font-size: 24px;
+    font-family: "adobe-garamond-pro", bold;
+    margin-bottom: 20px;
+    color: #333;
+    flex-basis: 100%;
+    text-align: center;
+} 
+
+/* Featured Work Section */
+.featured-work {
+    padding: 50px;
+    /* background-color: #f8f8f8; */
+    text-align: center;
+}
+
+/* Project Cards Container */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows wrapping to new rows */
+    gap: 20px;
+    /* Space between cards */
+    margin-top: 20px;
+    /* Add spacing between heading and cards */
+    justify-content: center;
+    margin-bottom: 65px;
+}
+
+/* Individual Project Card */
+.project-card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(100% / 2.5 - 20px);
+    /* Smaller cards (3 per row) */
+    max-width: 400px;
+    /* Optional: constrain card size */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect for Cards */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Icon (SVG) */
+.icon {
+    margin-right: 10px;
+    fill: #ca6935;
+    /* Icon color */
+    width: 36px;
+    /* Adjusted icon size */
+    height: 36px;
+}
+
+/* Project Info */
+.project-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Project Title */
+.project-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Project Description */
+.project-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Learn More Link */
+.learn-more {
+    font-size: 14px;
+    color: #ca6935;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.learn-more:hover {
+    color: #8a441e;
+    /* Darker hover color */
+}
+
