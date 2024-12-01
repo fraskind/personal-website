@@ -26,10 +26,13 @@ html {
 
 /* Sticky Header */
 .sticky-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     position: sticky;
     top: 0;
     background-color: white;
-    /* Dark background */
     color: rgb(0, 0, 0);
     z-index: 1000;
     padding: 10px 20px;
@@ -37,11 +40,11 @@ html {
     margin-right: 20px;
 }
 
+
 /* Navigation Links */
 .nav-links {
     display: flex;
-    justify-content: flex-end;
-    /* Right-align links */
+    /* justify-content: flex-end; */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -77,50 +80,40 @@ html {
     /* Underline current page link */
 }
 
-/* Example for Current Page Link */
-body.cs-work .nav-link[href="cs-work.html"],
-body.ux-work .nav-link[href="ux-work.html"] {
-    text-decoration: underline;
-}
-
 /* Header Icons */
 .header-icons {
     display: flex;
-    align-items: center;
-    position: absolute;
+    /* position: absolute; */
     /* Position in the top left corner */
     top: 10px;
     left: 20px;
     gap: 15px;
-    /* Space between icons */
-    z-index: 1001;
-    /* Ensure it stays above other elements */
 }
 
 .icon-link {
-    color: #333;
-    /* Icon color */
-    font-size: 20px;
-    /* Icon size */
+    color: #333; /* Icon color */
+    font-size: 20px; /* Icon size */
     transition: color 0.3s ease;
 }
 
 .icon-link:hover {
     color: #ca6935;
-    /* Hover color */
     text-decoration: none;
-    /* Remove any underline effect */
 }
 
 /* INTRODUCTION STYLING */
 
 /* NAME PRONUNCIATION */
+.name {
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+}
+
 /* Tooltip Container */
 .tooltip {
     position: relative;
-    /* Establish a context for the tooltip */
     cursor: help;
-    /* Indicate more information is available */
 }
 
 /* Tooltip Text */
@@ -157,10 +150,13 @@ body.ux-work .nav-link[href="ux-work.html"] {
 }
 
 .intro-logo {
-    max-width: 100px;
-    /* Adjust the size as needed */
+    width: 20%;
     margin-bottom: 10px;
     /* Space between the logo and the heading */
+}
+
+.card-logo {
+    width: 15%;
 }
 
 /* Keyframes for fade-in from the right */
@@ -189,6 +185,7 @@ body.ux-work .nav-link[href="ux-work.html"] {
 #intro-heading {
     font-size: 50px;
     font-family: "adobe-garamond-pro", bold;
+    position: relative;
 }
 
 .intro {
@@ -286,10 +283,7 @@ body.ux-work .nav-link[href="ux-work.html"] {
     border-radius: 12px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    width: calc(100% / 2.5 - 20px);
-    /* Smaller cards (3 per row) */
-    max-width: 400px;
-    /* Optional: constrain card size */
+    width: 65%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -304,20 +298,21 @@ body.ux-work .nav-link[href="ux-work.html"] {
     margin-right: 10px;
     fill: #ca6935;
     /* Icon color */
-    width: 36px;
+    width: 40%;
     /* Adjusted icon size */
-    height: 36px;
+    height: auto;
 }
 
 /* Project Info */
 .project-info {
-    display: flex;
-    flex-direction: column;
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
 }
 
 /* Project Title */
 .project-title {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 5px;
     color: #333;
@@ -325,22 +320,56 @@ body.ux-work .nav-link[href="ux-work.html"] {
 
 /* Project Description */
 .project-description {
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     margin-bottom: 10px;
 }
 
-/* Learn More Link */
-.learn-more {
-    font-size: 14px;
-    color: #ca6935;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s ease;
+.tools {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.learn-more:hover {
-    color: #8a441e;
-    /* Darker hover color */
+.tool {
+    margin: 0 8px 6px 0;
+    padding: 4px 12px;
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    white-space: nowrap;
 }
 
+
+/* Disable animations */
+@media (prefers-reduced-motion: reduce) {
+    /* Disable transitions and animations */
+    .fade-in-right {
+        animation: none;
+    }
+
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    /* Sticky Header */
+    .sticky-header, body {
+        background-color: black;
+        color: white;
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+    .icon-link {
+        color: #D3D3D3;
+    }
+
+    #project-type-heading {
+        color: white;
+    }
+
+}

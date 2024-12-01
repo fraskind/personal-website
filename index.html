@@ -27,24 +27,31 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="index.html" class="nav-link active">Current Work</a></li>
-                        <li><a href="#cs-projects" class="nav-link">CS Projects</a></li>
-                        <li><a href="#ux-projects" class="nav-link">UX Projects</a></li>
-                        <li><a href="#about" class="nav-link">About Me</a></li>
-                        <li><a href="files/RaskindFannyResume.pdf" target="_blank" class="nav-link">Resume <img src="images/external-link.svg" alt="External Link Icon" class="external-link-icon"></a></li>
-                    </ul>
-                </nav>
-            </header>
-    
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Current Work</a></li>
+                    <li><a href="#cs-projects" class="nav-link">CS Projects</a></li>
+                    <li><a href="#ux-projects" class="nav-link">UX Projects</a></li>
+                    <li><a href="about.html" class="nav-link">About Me</a></li>
+                    <li><a href="files/RaskindFannyResume.pdf" target="_blank" class="nav-link">Resume
+                        <i class="fa-regular fa-file"></i>
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
      <main>
         <section class="intro">
-            <!-- TEXT for the intro -->
             <div class="intro-content">
                 <div class="intro-text">
                     <h1 id="intro-heading">
-                        Hi! I'm <span class="tooltip" data-tooltip="FAW-nee RAS-kind">Fanny Raskind</span>.
+                        Hi! I'm <span class="tooltip" data-tooltip="FAW-nee RAS-kind">Fanny Raskind.</span>
+                        <!-- Name pronunciation -->
+                        <span class="name">
+                            <audio id="name-pronunciation" src="files/name.m4a"></audio>
+                            <span onclick="document.getElementById('name-pronunciation').play()">
+                                <i class="fas fa-volume-high"></i>
+                            </span>
+                        </span>
                     </h1>
                     <p> I’m a curious and creative <a href="#cs-projects" class="nav-link">Computer Science</a> and <a href="#ux-projects" class="nav-link">UX Research/Design</a> student at the <a href="https://cse.engin.umich.edu/" target="_blank" class="nav-link">University of Michigan</a>. I’m passionate about the interdisciplinary connections between technology, human behavior, and design.</p>
                     <p></p>
@@ -66,23 +73,34 @@
             <section id="cs-projects" class="projects">
                 <h2 id="project-type-heading"> CS Projects </h2>
                 <div class="project-card">
-                    <svg class="icon w-12 h-12" viewBox="0 0 80 80" fill="none">
-                        <!-- SVG content here -->
-                    </svg>
+                    <img src="images/iglog.jpg" alt="instagram-logo" class="icon">
                     <div class="project-info">
                         <h3 class="project-title">Social Media Platform</h3>
                         <p class="project-description">Developed a full-stack social media platform via Flask.</p>
-                        <a href="cs-project-1.html" class="learn-more">Learn More</a>
+                        <div class="tools">
+                            <div class="tool">React.js</div>
+                            <div class="tool">SQL</div>
+                            <div class="tool">REST API</div>
+                            <div class="tool">Jinja2</div>
+                            <div class="tool">Flask</div>
+                            <div class="tool">Git</div>
+                            <div class="tool">AWS</div>
+                        </div>
                     </div>
                 </div>
                 <div class="project-card">
-                    <svg class="icon w-12 h-12" viewBox="0 0 80 80" fill="none">
-                        <!-- SVG content here -->
-                    </svg>
+                    <img src="images/gm-logo.png" alt="general-motors-logo" class="icon">
                     <div class="project-info">
                         <h3 class="project-title">General Motors Data Pipeline</h3>
                         <p class="project-description">Designed and built a unified data pipeline and database.</p>
-                        <a href="cs-project-2.html" class="learn-more">Learn More</a>
+                        <div class="tools">
+                            <div class="tool">React.js</div>
+                            <div class="tool">SQL</div>
+                            <div class="tool">Flask</div>
+                            <div class="tool">Git</div>
+                            <div class="tool">Figma</div>
+                            <div class="tool">UX Design</div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -91,23 +109,29 @@
             <section id="ux-projects" class="projects">
                 <h2 id="project-type-heading"> UX Projects </h2>
                 <div class="project-card">
-                    <svg class="icon w-12 h-12" viewBox="0 0 80 80" fill="none">
-                        <!-- SVG content here -->
-                    </svg>
+                    <img src="images/env-app-logo.png" alt="env-app-logo" class="icon">
                     <div class="project-info">
                         <h3 class="project-title">Recycling and Sustainability Platform</h3>
                         <p class="project-description">Designed an app aimed to create more sustainable communities.</p>
-                        <a href="ux-project-1.html" class="learn-more">Learn More</a>
-                    </div><img src="images/logo.png" alt="Logo" class="intro-logo">
+                        <div class="tools">
+                            <div class="tool">Figma</div>
+                            <div class="tool">UX Design</div>
+                            <div class="tool">UX Research</div>
+                            <div class="tool">Prototyping</div>
+                            <div class="tool">Interviews</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <svg class="icon w-12 h-12" viewBox="0 0 80 80" fill="none">
-                        <!-- SVG content here -->
-                    </svg>
+                    <img src="images/ad-logo.png" alt="atlas-digital-logo" class="icon">
                     <div class="project-info">
                         <h3 class="project-title">Atlas Website Redesign</h3>
                         <p class="project-description">Modernized the design and user experience for a professional website.</p>
-                        <a href="ux-project-2.html" class="learn-more">Learn More</a>
+                        <div class="tools">
+                            <div class="tool">Figma</div>
+                            <div class="tool">UX Design</div>
+                            <div class="tool">Prototyping</div>
+                        </div>
                     </div>
                 </div>
             </section>
