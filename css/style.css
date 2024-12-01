@@ -29,7 +29,6 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
     position: sticky;
     top: 0;
     background-color: white;
@@ -177,7 +176,7 @@ html {
     animation: fadeInRight 1s ease-out forwards;
 }
 
-/* Add padding to the left */
+/* Add padding to the left of deer */
 .padded-left {
     padding-left: 55px;
 }
@@ -190,16 +189,12 @@ html {
 
 .intro {
     padding-top: 50px; /* Add padding between header and intro */
-    position: relative;
-    overflow: hidden;
 }
+
 /* Aligning intro content */
 .intro-content {
     display: flex;
     align-items: center;
-    position: relative;
-    z-index: 2;
-    justify-content: space-between;
     height: 100%;
     padding: 0 200px; /* Add padding left and right */
 }
@@ -211,20 +206,13 @@ html {
 }
 
 .intro-image {
-    text-align: right;
-    overflow: hidden; /* Ensures the image is cropped */
     height: 550px;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    /* position: absolute; */
 }
 
 .intro-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
     /* clip-path: inset(0 15% 0 0); */
     mask-image: linear-gradient(to right, transparent, black 40%);
     -webkit-mask-image: linear-gradient(to right, transparent, black 40%);
