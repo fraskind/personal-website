@@ -7,11 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/ldc1qro.css">
-
-    <!-- Get your own FontAwesome ID -->
-    <script src="https://kit.fontawesome.com/179fb93166.js" crossorigin="anonymous"></script>
-
-    <title>Fanny Raskind's Personal Website</title>
+    <script src="script.js" defer></script>
+    <title>About Fanny Raskind</title>
     </head>
     <body>
         <!-- Sticky Header -->
@@ -39,9 +36,25 @@
                     </ul>
                 </nav>
             </header>
-     <main>
+        <main>
+    <section aria-label="Photos of Fanny">
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev">&#171;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#187;</button>
 
-        </main>
-
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="images/img11.jpg" alt="Fanny & Jayce LOL!"/>
+                </li>
+                <li class="slide">
+                    <img src="images/img2.JPG" alt="Fanny Img #2">
+                </li>
+                <li class="slide">
+                    <img src="images/img10.JPEG" alt="Fanny Img #3">
+                </li>
+            </ul>
+        </div>
+    </section>
+    
     </body>
 </html>

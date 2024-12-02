@@ -8,22 +8,19 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/ldc1qro.css">
 
-    <!-- Get your own FontAwesome ID -->
-    <script src="https://kit.fontawesome.com/179fb93166.js" crossorigin="anonymous"></script>
-
     <title>Fanny Raskind's Personal Website</title>
     </head>
     <body>
         <!-- Sticky Header -->
         <header class="sticky-header">
             <div class="header-icons">
-                <a href="https://www.linkedin.com/in/fanny-raskind" target="_blank" class="icon-link">
+                <a href="https://www.linkedin.com/in/fanny-raskind" target="_blank" class="icon-link" aria-label="LinkedIn Profile">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/fraskind" target="_blank" class="icon-link">
+                <a href="https://github.com/fraskind" target="_blank" class="icon-link" aria-label="GitHub Profile">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:fraskind@umich.edu" class="icon-link">
+                <a href="mailto:fraskind@umich.edu" class="icon-link" aria-label="Email Fanny Raskind">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -33,9 +30,10 @@
                     <li><a href="#cs-projects" class="nav-link">CS Projects</a></li>
                     <li><a href="#ux-projects" class="nav-link">UX Projects</a></li>
                     <li><a href="about.html" class="nav-link">About Me</a></li>
-                    <li><a href="files/RaskindFannyResume.pdf" target="_blank" class="nav-link">Resume
-                        <i class="fa-regular fa-file"></i>
-                    </a></li>
+                    <li><a href="files/RaskindFannyResume.pdf" target="_blank" class="nav-link">
+                            Resume <i class="fa-regular fa-file" aria-label="Resume File Icon"></i>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -49,7 +47,7 @@
                         <span class="name">
                             <audio id="name-pronunciation" src="files/name.m4a"></audio>
                             <span onclick="document.getElementById('name-pronunciation').play()">
-                                <i class="fas fa-volume-high"></i>
+                                <i class="fab fa-volume-high">Play</i>
                             </span>
                         </span>
                     </h1>
