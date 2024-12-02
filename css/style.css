@@ -6,6 +6,7 @@ html {
     font-family: "adobe-garamond-pro", serif;
     box-sizing: border-box;
 }
+/*TODO: Fade-In Animation */
 
 /* NAVIGATION LINK STYLING */
 /* Styling size of external link icon */
@@ -188,6 +189,18 @@ html {
     position: relative;
 }
 
+#about-me-heading {
+    font-size: 50px;
+    font-family: "adobe-garamond-pro", bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.scroll-down {
+    font-size: 20px;
+    text-align: center;
+}
+
 .intro {
     padding-top: 50px;
     /* Add padding between header and intro */
@@ -233,18 +246,41 @@ html {
 }
 
 #work-heading {
-    font-size: 36px;
+    font-size: 42px;
     font-family: "adobe-garamond-pro", bold;
-    margin-bottom: 65px;
+    margin-bottom: 1%;
+    /* Gradient background */
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #project-type-heading {
     font-size: 24px;
     font-family: "adobe-garamond-pro", bold;
+    margin-top: 10px;
     margin-bottom: 20px;
     color: #333;
     flex-basis: 100%;
     text-align: center;
+    /* Gradient background */
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 50%;
+}
+/* Hover Animation */
+#project-type-heading:hover {
+    transform: translateY(-5px) scale(1.05);
+    /* Moves upward and scales slightly */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+    background: linear-gradient(90deg, #feb47b, #ff7e5f);
+    /* Reverse gradient direction */
 }
 
 /* Featured Work Section */
@@ -273,7 +309,7 @@ html {
     align-items: center;
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px rgba(255, 162, 56, 0.8);
     padding: 15px;
     width: 65%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -336,20 +372,23 @@ html {
 
 /* ABOUT ME PAGE */
 .slide img {
-    height: 800px;
+    height: 700px;
     width: 600px;
     object-fit: cover;
     object-position: center;
     z-index: 1;
+    border: 5px solid #000000;
 }
 
 .carousel {
+    margin-top: 25px;
     justify-content: center;
     display: flex;
     align-items: center;
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
+    /* height: auto; */
 }
 
 .carousel>ul {
@@ -364,12 +403,23 @@ html {
     position: absolute;
     inset: 0;
     opacity: 0;
-    transition: opacity 0.5 ease;
     z-index: 1;
+    transition: opacity 0.3s ease, transform 0.5s ease;
 }
 
 .slide[data-active] {
     opacity: 1;
+    z-index: 2;
+}
+
+.slide[data-prev] {
+    opacity: 0.5;
+    transform: translateX(-25%) scale(.7);
+}
+
+.slide[data-next] {
+    opacity: 0.5;
+    transform: translateX(25%) scale(.7);
 }
 
 .carousel-button {
@@ -378,7 +428,7 @@ html {
     border: none;
     font-size: 4rem;
     top: 50%;
-    z-index: 2;
+    z-index: 3;
     transform: translateY(-50%);
     color: rgba(0, 0, 0, 0.5);
     border-radius: .25rem;
@@ -401,12 +451,51 @@ html {
     cursor: pointer;
 }
 
+.about-me {
+    font-size: 18px;
+    text-align: justify;
+    margin: 0 20%;
+    /* padding: 0 40px; */
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.about-me > h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 3%;
+    text-decoration: underline;
+}
+
+.about-me > img {
+    /* align-items: center; */
+    transform: scale(0.9);
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
 /* Disable animations */
 @media (prefers-reduced-motion: reduce) {
 
     /* Disable transitions and animations */
     .fade-in-right {
         animation: none;
+    }
+
+    .fade-in {
+        animation: none;
+        /* Disable animations */
     }
 
 }

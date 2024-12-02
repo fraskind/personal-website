@@ -7,6 +7,18 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/ldc1qro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="preload" href="css/style.css" as="style"/> -->
+
+    <!-- Preload to save time -->
+    <link rel="preload" href="images/img2.JPG" as="image"/>
+    <link rel="preload" href="images/img11.jpg" as="image"/>
+    <link rel="preload" href="images/img10.JPEG" as="image"/>
+    <link rel="preload" href="images/img3.JPG" as="image"/>
+    <link rel="preload" href="images/img6.jpg" as="image"/>
+    <link rel="preload" href="images/img8.JPG" as="image"/>
+    
+
     <script src="script.js" defer></script>
     <title>About Fanny Raskind</title>
     </head>
@@ -27,34 +39,63 @@
                 <nav>
                     <ul class="nav-links">
                         <li><a href="index.html" class="nav-link">Current Work</a></li>
-                        <li><a href="#cs-projects" class="nav-link">CS Projects</a></li>
-                        <li><a href="#ux-projects" class="nav-link">UX Projects</a></li>
+                        <li><a href="index.html#cs-projects" class="nav-link">CS Projects</a></li>
+                        <li><a href="index.html#ux-projects" class="nav-link">UX Projects</a></li>
                         <li><a href="about.html" class="nav-link active">About Me</a></li>
-                        <li><a href="files/RaskindFannyResume.pdf" target="_blank" class="nav-link">Resume
-                            <i class="fa-regular fa-file"></i>
-                        </a></li>
+                         <li><a href="files/RaskindFannyResume.pdf" target="_blank" class="nav-link">
+                            Resume <i class="fa fa-external-link" aria-hidden="true"></i>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </header>
         <main>
+    
+    <h1 id="about-me-heading">
+        picture this...
+    </h1>
+    <p class="scroll-down">(scroll down to read more about me! &#8595;)</p>
     <section aria-label="Photos of Fanny">
         <div class="carousel" data-carousel>
-            <button class="carousel-button prev" data-carousel-button="prev">&#171;</button>
-            <button class="carousel-button next" data-carousel-button="next">&#187;</button>
-
+            <button class="carousel-button prev" data-carousel-button="prev">&#8612;</button>
+            <button class="carousel-button next" data-carousel-button="next">&#8614;</button>
             <ul data-slides>
-                <li class="slide" data-active>
-                    <img src="images/img11.jpg" alt="Fanny & Jayce LOL!"/>
-                </li>
-                <li class="slide">
+                <li class="slide" data-prev>
                     <img src="images/img2.JPG" alt="Fanny Img #2">
                 </li>
-                <li class="slide">
+                <li class="slide" data-active>
+                    <img src="images/img6.jpg" alt="Fanny & Jayce LOL!"/>
+                </li>
+                <li class="slide" data-next>
                     <img src="images/img10.JPEG" alt="Fanny Img #3">
+                </li>
+                <li class="slide">
+                    <img src="images/img3.JPG" alt="Fanny Img #4">
+                </li>
+                <li class="slide">
+                    <img src="images/img11.jpg" alt="Fanny Img #5">
+                </li>
+                <li class="slide">
+                    <img src="images/img8.JPG" alt="Fanny Img #6">
                 </li>
             </ul>
         </div>
     </section>
+    <div class="about-me">
+        <h2> from 20 acres to the big city </h2>
+        <p>It's nice to meet you! My name is Fanny (pronounced like the baby deer), and I'm a Junior at the Univeristy of Michigan studying Computer Science with a minor in UX Design. I grew up in the Upper Peninsula of Michigan, a place filled with creativity and exploration.</p>
+        <!-- Insert map here -->
+        <img src="images/UP.png"/>
+        <p>I wanted to pursue something creative that could help people. This led me to Computer Science and UX Design, as both are extremely multidisciplinary.
+        I’m really passionate about the interdisciplinary connections between technology, human behavior, and design. There’s a few main things I’m currently or was recently involved in: I am a teaching assistant for <a href="https://eecs183.github.io/eecs183.org/staff.html" target="_blank" class="nav-link">EECS 183 (Intro to Programming)</a>, and I’m involved in <a href="https://www.atlasdigital.org/" target="_blank" class="nav-link">Atlas Digital</a>, a tech consulting club on campus, where I’ve worked on projects such as an internal application portal, and currently I’m working for General Motors to create a database management system. I’m really excited to begin my career in software development, soon with <a href="https://www.courierhealth.com/about-us" target="_blank" class="nav-link">Courier Health</a> in New York, New York!
+        </p>
+        <img src="images/ch.png"/>
+        <p> I like film and making videos, too. Here is a vlog of my first ever time visiting NYC (my future home this upcoming summer), a video I had a lot of fun making.</p>
+        <div class="video">
+            <iframe src="https://drive.google.com/file/d/1svl26ENlKGACOEH_yFmbUPQCkW9n4W4j/preview" width="640" height="480" allow="autoplay"></iframe>
+        </div>
+        <p>–––––––&#x2764; Thanks for getting to know me. :&#41;</p>
+    </div>
     
     </body>
 </html>
