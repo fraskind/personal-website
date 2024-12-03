@@ -33,3 +33,22 @@ buttons.forEach(button => {
         });
     })
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+
+    learnMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const projectCard = button.closest('.project-card');
+            const moreInfo = projectCard.querySelector('.more-info');
+            projectCard.classList.toggle('expanded');
+            if (projectCard.classList.contains('expanded')) {
+                moreInfo.style.height = moreInfo.scrollHeight + 'px';
+                moreInfo.style.opacity = '1';
+            } else {
+                moreInfo.style.height = '0';
+                moreInfo.style.opacity = '0';
+            }
+        });
+    });
+});

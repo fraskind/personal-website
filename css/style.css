@@ -286,7 +286,6 @@ html {
 /* Featured Work Section */
 .featured-work {
     padding: 50px;
-    /* background-color: #f8f8f8; */
     text-align: center;
 }
 
@@ -294,11 +293,8 @@ html {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    /* Allows wrapping to new rows */
     gap: 20px;
-    /* Space between cards */
     margin-top: 20px;
-    /* Add spacing between heading and cards */
     justify-content: center;
     margin-bottom: 65px;
 }
@@ -309,7 +305,7 @@ html {
     align-items: center;
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0px 2px 4px rgba(255, 162, 56, 0.8);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     padding: 15px;
     width: 65%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -351,6 +347,33 @@ html {
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+    background-color: #ca6935;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "adobe-garamond-pro";
+}
+
+/* More Info Section */
+.more-info {
+    height: 0;
+    margin-top: 10px;
+    margin-top: 10px;
+    opacity: 0;
+    transition: height 0.2s ease, opacity 0.2s ease;
+    font-family: "adobe-garamond-pro";
+}
+
+.project-card.expanded .more-info {
+    opacity: 1;
+    color: black;
 }
 
 .tools {
@@ -434,6 +457,7 @@ html {
     border-radius: .25rem;
     padding: 0, .5rem;
     background-color: (0, 0, 0, .1);
+
 }
 
 
@@ -523,3 +547,6 @@ html {
     }
 
 }
+
+/* TODO: turn off animations for media query, night mode for project-card 
+fix contrast */
