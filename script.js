@@ -32,7 +32,22 @@ buttons.forEach(button => {
             if (index !== nextIndex) delete slide.dataset.next;
         });
     })
-})
+});
+
+// Add keydown event listener for arrow keys
+document.addEventListener('keydown', function(event) {
+    const activeCarousel = document.querySelector("[data-carousel]");
+    if (!activeCarousel) return;
+
+    const prevButton = activeCarousel.querySelector("[data-carousel-button='prev']");
+    const nextButton = activeCarousel.querySelector("[data-carousel-button='next']");
+
+    if (event.key === 'ArrowLeft') {
+        prevButton.click();
+    } else if (event.key === 'ArrowRight') {
+        nextButton.click();
+    }
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
