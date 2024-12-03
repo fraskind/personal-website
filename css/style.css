@@ -365,8 +365,8 @@ html {
 .more-info {
     height: 0;
     margin-top: 10px;
-    margin-top: 10px;
     opacity: 0;
+    visibility: hidden; /* avoid contrast errors */
     transition: height 0.2s ease, opacity 0.2s ease;
     font-family: "adobe-garamond-pro";
 }
@@ -374,6 +374,7 @@ html {
 .project-card.expanded .more-info {
     opacity: 1;
     color: black;
+    visibility: visible;
 }
 
 .tools {
